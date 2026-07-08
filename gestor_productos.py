@@ -38,4 +38,19 @@ def validar_stock(stock):
     except ValueError:
         return False
     
-    
+def validar_vendidos(vendidos):
+    try:
+        valor = int(vendidos)
+        return valor >= 0
+    except ValueError:
+        return False
+
+def leer_opcion():
+    try:
+        opcion = int(input("Seleccione una opción: "))
+        if 1 <= opcion <= 7:
+            return opcion
+        else:
+            return -1
+    except ValueError:
+        return -1
