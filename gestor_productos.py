@@ -19,3 +19,23 @@ def validar_categoria(categoria):
         return False
     return True
 
+def validar_precio(precio):
+    try:
+        valor = int(precio)
+        return valor > 0
+    except ValueError:
+        return False
+
+def validar_disponible(opcion):
+    if not opcion:
+        return False
+    return opcion.lower() in ['s', 'n']
+
+def validar_stock(stock):
+    try:
+        valor = int(stock)
+        return valor >= 0
+    except ValueError:
+        return False
+    
+    
